@@ -50,4 +50,4 @@
 		<nav id="site-navigation" class="main-navigation">
 			<!-- Here goes the navigation -->
 		</nav>
-	</header><!-- .site-header -->
+	</header>

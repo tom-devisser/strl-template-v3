@@ -14,5 +14,5 @@
 
 	<footer class="site-footer">
 		<!-- This is where the footer widgets will be -->
-	</footer><!-- .site-footer -->
+	</footer>
 </div><!-- #page .site -->

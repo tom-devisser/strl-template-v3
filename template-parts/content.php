@@ -1,6 +1,6 @@
 <?php
 /**
- * Template part posts
+ * Template part for displaying posts
  *
  * Displays content for post types unless there's a content-{post-type}.php file.
  *
