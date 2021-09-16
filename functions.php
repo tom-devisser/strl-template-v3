@@ -131,3 +131,8 @@ function strl_scripts() {
 	wp_enqueue_style( 'strl-style', get_stylesheet_uri(), array(), _S_VERSION );
 }
 add_action( 'wp_enqueue_scripts', 'strl_scripts' );
+
+/**
+ * Implements the helper functions.
+ */
+require get_template_directory() . '/inc/helpers.php';
