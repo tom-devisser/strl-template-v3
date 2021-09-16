@@ -5,6 +5,7 @@
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
  *
  * @package strl
+ * @since 1.0.0
  */
 
 if ( ! function_exists( 'strl_setup' ) ) {
@@ -12,6 +13,7 @@ if ( ! function_exists( 'strl_setup' ) ) {
 	 * Sets up theme defaults and registers support for various WordPress features.
 	 *
 	 * @return void
+	 * @since 1.0.0
 	 */
 	function strl_setup() {
 		// Make the theme translatable.
@@ -66,6 +68,7 @@ add_action( 'after_setup_theme', 'strl_setup' );
  * Registers widget areas.
  *
  * @package strl
+ * @since 1.0.0
  */
 function strl_widgets_init() {
 	register_sidebar(
@@ -122,6 +125,7 @@ add_action( 'widgets_init', 'strl_widgets_init' );
  * Enqueues scripts and styles.
  *
  * @package strl
+ * @since 1.0.0
  */
 function strl_scripts() {
 	wp_enqueue_style( 'strl-style', get_stylesheet_uri(), array(), _S_VERSION );

@@ -7,7 +7,7 @@
  * @link https://codex.wordpress.org/Creating_an_Error_404_Page
  *
  * @package strl
- * @since 1.0
+ * @since 1.0.0
  */
 
 get_header();

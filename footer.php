@@ -7,7 +7,7 @@
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
  * @package strl
- * @since 1.0
+ * @since 1.0.0
  */
 
 ?>
