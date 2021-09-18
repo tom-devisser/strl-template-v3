@@ -128,7 +128,7 @@ add_action( 'widgets_init', 'strl_widgets_init' );
  * @since 1.0.0
  */
 function strl_scripts() {
-	wp_enqueue_style( 'strl-style', get_stylesheet_uri(), array(), gmdate( 'd-M-H:i:s' ) );
+	wp_enqueue_style( 'strl-style', get_template_directory_uri() . '/assets/styles.min.css', array(), '1.0' );
 }
 add_action( 'wp_enqueue_scripts', 'strl_scripts' );
 

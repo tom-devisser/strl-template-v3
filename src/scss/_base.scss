@@ -1,0 +1,34 @@
+// Color variables - using variations of 30% using https://maketintsandshades.com
+$color-primary: #6d8299;
+$color-primary-dark: #57687a;
+$color-primary-light: #99a8b8;
+
+$color-secondary: #8ca1a5;
+$color-secondary-dark: #627173;
+$color-secondary-light: #afbdc0;
+
+$color-white: #fff;
+
+$color-black: #141414;
+$color-grey: #a7a7a7;
+$color-grey-dark: #757575;
+$color-grey-light: #c1c1c1;
+
+// Font sizes - using the Major Second scale from https://type-scale.com
+$font-size-h1: 1.802rem;
+$font-size-h2: 1.602rem;
+$font-size-h3: 1.424rem;
+$font-size-h4: 1.266rem;
+$font-size-h5: 1.125rem;
+$font-size-default: 1rem;
+$font-size-s: 0.889rem;
+
+// Transitions
+$transition-slow: 0.3s ease;
+$transition-default: 0.2s ease;
+$transition-fast: 0.1s ease;
+
+// Shadows
+$shadow-small: 0px 5px 15px 5px rgba($color-black, 0.1);
+$shadow-default: 0px 5px 30px 5px rgba($color-black, 0.2);
+$shadow-large: 0px 5px 50px 5px rgba($color-black, 0.3);

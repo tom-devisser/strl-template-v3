@@ -1,0 +1,25 @@
+%btn {
+	padding: 1rem;
+	text-decoration: none;
+	transition: $transition-default;
+}
+
+.btn-primary {
+	@extend %btn;
+	background-color: $color-primary;
+	color: $color-white;
+
+	&:hover {
+		background-color: $color-primary-light;
+	}
+}
+
+.btn-secondary {
+	@extend %btn;
+	background-color: $color-secondary;
+	color: $color-white;
+
+	&:hover {
+		background-color: $color-secondary-light
+	}
+}
