@@ -14,8 +14,8 @@
  * @package strl
  * @since 1.0.0
  */
-strl_dump( $variable ) {
-	echo '<pre>'; // phpcs:ignore
-	var_dump( $variable ); // phpcs:ignore
+function strl_dump( $variable ) {
+	echo '<pre>';
+	var_dump( $variable ); // phpcs:ignore WordPress.PHP.DevelopmentFunctions.error_log_var_dump
 	echo '</pre>';
 }
