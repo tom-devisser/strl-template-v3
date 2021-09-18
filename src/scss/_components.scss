@@ -1,7 +1,13 @@
 %btn {
 	padding: 1rem;
+	font-size: $font-size-default;
 	text-decoration: none;
 	transition: $transition-default;
+	display: inline-block;
+
+	&:hover {
+		box-shadow: $shadow-small;
+	}
 }
 
 .btn-primary {
@@ -20,6 +26,6 @@
 	color: $color-white;
 
 	&:hover {
-		background-color: $color-secondary-light
+		background-color: $color-secondary-light;
 	}
 }
