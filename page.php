@@ -14,6 +14,7 @@ get_header();
 ?>
 
 <main id="primary" class="site-main">
+	<div class="container">
 	<?php
 	if ( have_posts() ) {
 		while ( have_posts() ) {
@@ -22,6 +23,10 @@ get_header();
 		}
 	}
 	?>
+	<!-- Kitchen Sink -->
+	<a href="#" class="btn-primary">Primary</a>
+	<a href="#" class="btn-secondary">Secondary</a>
+	</div>
 </main><!-- #primary -->
 
 <?php

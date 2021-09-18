@@ -9,10 +9,11 @@ $color-secondary-light: #afbdc0;
 
 $color-white: #fff;
 
+// Only grey variations use 80%
 $color-black: #141414;
 $color-grey: #a7a7a7;
-$color-grey-dark: #757575;
-$color-grey-light: #c1c1c1;
+$color-grey-dark: #212121;
+$color-grey-light: #ededed;
 
 // Font sizes - using the Major Second scale from https://type-scale.com
 $font-size-h1: 1.802rem;
@@ -32,3 +33,12 @@ $transition-fast: 0.1s ease;
 $shadow-small: 0px 5px 20px 5px rgba($color-black, 0.1);
 $shadow-default: 0px 5px 30px 5px rgba($color-black, 0.2);
 $shadow-large: 0px 5px 50px 5px rgba($color-black, 0.3);
+
+// Base
+.container {
+	max-width: 75rem;
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: 1rem;
+	padding-right: 1rem;
+}

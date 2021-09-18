@@ -1,0 +1,27 @@
+.site-header {
+	background-color: $color-grey-light;
+	padding: 1.5rem 0;
+
+	.container {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+}
+
+.main-navigation {
+	.menu {
+		display: flex;
+		list-style: none;
+		padding-left: 0;
+
+		.menu-item {
+			margin-left: 12px;
+			margin-right: 12px;
+		}
+
+		.menu-item:last-child {
+			margin-right: 0;
+		}
+	}
+}
