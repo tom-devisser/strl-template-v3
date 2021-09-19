@@ -29,7 +29,7 @@
 	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'strl' ); ?></a>
 
 	<header class="site-header">
-		<div class="container">
+		<div class="grid-container site-header-inner">
 			<div class="site-branding">
 				<?php
 				if ( is_front_page() && is_home() ) {
@@ -53,5 +53,5 @@
 			<nav id="site-navigation" class="main-navigation">
 				<?php wp_nav_menu( 'primary-menu' ); ?>
 			</nav>
-		</div>
+		</div><!-- .site-header-inner -->
 	</header>
