@@ -128,8 +128,15 @@ add_action( 'widgets_init', 'strl_widgets_init' );
  * @since 1.0.0
  */
 function strl_scripts() {
-	wp_enqueue_style( 'google-font-ubuntu', 'https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap', array(), '1.0' );
-	wp_enqueue_style( 'strl-style', get_template_directory_uri() . '/assets/styles.min.css', array(), '1.0' );
+	wp_dequeue_script( 'jquery' );
+	wp_deregister_script( 'jquery' );
+
+	wp_enqueue_script( 'vendor', get_template_directory_uri() . '/assets/vendor.min.js', array(), time(), true );
+	wp_enqueue_script( 'foundation', get_template_directory_uri() . '/assets/foundation.min.js', array( 'vendor' ), time(), true );
+	wp_enqueue_script( 'strl-scripts', get_template_directory_uri() . '/assets/scripts.min.js', array( 'foundation' ), time(), true );
+
+	wp_enqueue_style( 'google-font-ubuntu', 'https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap', array(), '1.0.0' );
+	wp_enqueue_style( 'strl-styles', get_template_directory_uri() . '/assets/styles.min.css', array(), time() );
 }
 add_action( 'wp_enqueue_scripts', 'strl_scripts' );
 

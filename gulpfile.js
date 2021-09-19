@@ -24,10 +24,33 @@ function css() {
 		.pipe( dest( 'assets/' ) );
 }
 
-exports.js = js;
+function foundation() {
+	return src( [
+		'src/js/foundation/foundation.core.js',
+		'src/js/foundation/foundation.util.*.js',
+		'src/js/foundation/foundation.tabs.js',
+		'src/js/foundation/*.js',
+	] )
+		.pipe( concat( 'foundation.min.js' ) )
+		.pipe( babel( { compact: false } ) )
+		.pipe( terser() )
+		.pipe( dest( 'assets/' ) );
+}
+
+function vendor() {
+	return src( 'src/js/vendor/*.js' )
+		.pipe( babel() )
+		.pipe( terser() )
+		.pipe( rename( 'vendor.min.js' ) )
+		.pipe( dest( 'assets/' ) );
+}
+
 exports.css = css;
+exports.js = js;
+exports.foundation = foundation;
+exports.vendor = vendor;
 exports.watch = function() {
 	watch( 'src/js/*.js', js );
 	watch( 'src/scss/**/*.scss', css );
 };
-exports.default = parallel( js, css );
+exports.default = parallel( vendor, foundation, js, css );

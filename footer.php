@@ -16,3 +16,6 @@
 		<!-- This is where the footer widgets will be -->
 	</footer>
 </div><!-- #page .site -->
+<?php wp_footer(); ?>
+</body>
+</html>

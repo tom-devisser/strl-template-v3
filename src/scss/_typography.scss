@@ -1,11 +1,12 @@
 body {
-	font-family: 'Ubuntu', sans-serif;
+	font-family: $font-family-body;
 	font-size: 16px;
 }
 
 %heading {
 	font-weight: 700;
 	line-height: 1.15;
+	font-family: $font-family-heading;
 }
 
 h1, .heading-x-lg {
