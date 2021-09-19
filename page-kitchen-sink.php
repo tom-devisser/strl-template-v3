@@ -92,22 +92,22 @@ get_header();
 		<div class="grid-x grid-padding-x grid-padding-y">
 			<div class="cell">
 				<ul class="tabs" data-tabs id="strl-tabs" role="tablist">
-					<li class="tabs-title is-active"><a href="#panel1" aria-selected="true">Tab 1</a></li>
-					<li class="tabs-title"><a data-tabs-target="panel2" href="#panel2">Tab 2</a></li>
-					<li class="tabs-title"><a data-tabs-target="panel3" href="#panel3">Tab 3</a></li>
-					<li class="tabs-title"><a data-tabs-target="panel4" href="#panel4">Tab 4</a></li>
+					<li class="tabs-title is-active"><a href="#panel-1" aria-selected="true">Tab 1</a></li>
+					<li class="tabs-title"><a data-tabs-target="panel-2" href="#panel-2">Tab 2</a></li>
+					<li class="tabs-title"><a data-tabs-target="panel-3" href="#panel-3">Tab 3</a></li>
+					<li class="tabs-title"><a data-tabs-target="panel-4" href="#panel-4">Tab 4</a></li>
 				</ul>
 				<div class="tabs-content" data-tabs-content="strl-tabs">
-					<div class="tabs-panel is-active" id="panel1">
+					<div class="tabs-panel is-active" id="panel-1">
 						<p>Vivamus hendrerit arcu sed erat molestie vehicula. Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor. Ut in nulla enim. Phasellus molestie magna non est bibendum non venenatis nisl tempor. Suspendisse dictum feugiat nisl ut dapibus.</p>
 					</div><!-- .tabs-panel -->
-					<div class="tabs-panel" id="panel2">
+					<div class="tabs-panel" id="panel-2">
 						<p>Suspendisse dictum feugiat nisl ut dapibus.  Vivamus hendrerit arcu sed erat molestie vehicula. Ut in nulla enim. Phasellus molestie magna non est bibendum non venenatis nisl tempor.  Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor.</p>
 					</div><!-- .tabs-panel -->
-					<div class="tabs-panel" id="panel3">
+					<div class="tabs-panel" id="panel-3">
 						<p>Suspendisse dictum feugiat nisl ut dapibus.  Vivamus hendrerit arcu sed erat molestie vehicula. Ut in nulla enim. Phasellus molestie magna non est bibendum non venenatis nisl tempor.  Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor.</p>
 					</div><!-- .tabs-panel -->
-					<div class="tabs-panel" id="panel4">
+					<div class="tabs-panel" id="panel-4">
 						<p>Suspendisse dictum feugiat nisl ut dapibus.  Vivamus hendrerit arcu sed erat molestie vehicula. Ut in nulla enim. Phasellus molestie magna non est bibendum non venenatis nisl tempor.  Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor.</p>
 					</div><!-- .tabs-panel -->
 				</div><!-- .tabs-content -->
