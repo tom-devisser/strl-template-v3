@@ -15,15 +15,19 @@ get_header();
 ?>
 
 <main id="primary" class="site-main">
-	<?php
-	if ( have_posts() ) {
-		while ( have_posts() ) {
-			the_post();
-			// Shows content-{post-type}.php from /template-parts.
-			get_template_part( 'template-parts/content', get_post_type() );
+	<div class="grid-container">
+		<div class="grid-x grid-padding-x grid-padding-y">
+		<?php
+		if ( have_posts() ) {
+			while ( have_posts() ) {
+				the_post();
+				// Shows content-{post-type}.php from /template-parts.
+				get_template_part( 'template-parts/content', get_post_type() );
+			}
 		}
-	}
-	?>
+		?>
+		</div><!-- .grid-container -->
+	</div><!-- .grid-x -->
 </main><!-- #primary -->
 
 <?php

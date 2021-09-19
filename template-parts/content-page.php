@@ -12,7 +12,7 @@
 
 ?>
 
-<article <?php post_class(); ?>>
+<article <?php post_class( 'cell' ); ?>>
 	<header class="post-header">
 		<?php the_title( '<h1 class="post-title">', '</h1>' ); ?>
 	</header>

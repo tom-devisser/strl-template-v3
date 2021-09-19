@@ -12,7 +12,7 @@
 
 ?>
 
-<section class="no-results">
+<section class="no-results cell">
 	<h2><?php esc_html_e( 'Nothing found', 'strl' ); ?></h2>
 
 	<div class="page-content">

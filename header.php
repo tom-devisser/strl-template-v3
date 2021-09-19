@@ -42,8 +42,10 @@
 					<?php
 				}
 
-				$site_description = get_bloginfo( 'description', 'display' );
-				if ( $site_description ) {
+				// phpcs:ignore Squiz.PHP.CommentedOutCode.Found
+				// $site_description = get_bloginfo( 'description', 'display' );
+
+				if ( isset( $site_description ) && '' !== $site_description ) {
 					?>
 					<p class="site-description"><?php echo $site_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></p>
 					<?php
@@ -51,12 +53,12 @@
 				?>
 			</div><!-- .site-branding -->
 
-			<div class="menu-toggler" data-responsive-toggle="site-navigation" data-hide-for="medium">
-				<button class="menu-icon" type="button" data-toggle="site-navigation"></button>
-			</div><!-- .menu-toggler -->
-
 			<nav id="site-navigation" class="main-navigation">
 				<?php strl_main_navigation(); ?>
 			</nav>
+
+			<div class="menu-toggler" data-responsive-toggle="site-navigation" data-hide-for="medium">
+				<button class="menu-icon" type="button" data-toggle="site-navigation"></button>
+			</div><!-- .menu-toggler -->
 		</div><!-- .site-header-inner -->
 	</header>

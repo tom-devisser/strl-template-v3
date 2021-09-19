@@ -12,7 +12,7 @@
 
 ?>
 
-<article <?php post_class( 'search-card' ); ?>>
+<article <?php post_class( 'search-card cell' ); ?>>
 	<header class="post-header">
 		<?php the_title( '<h2 class="post-title">', '</h2>' ); ?>
 	</header>

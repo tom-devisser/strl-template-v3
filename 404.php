@@ -14,11 +14,15 @@ get_header();
 ?>
 
 <main id="primary" class="site-main">
-	<section class="error-404">
-		<h1><?php esc_html_e( "Oops! That page can't be found.", 'strl' ); ?></h1>
-		<p><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try a search?', 'strl' ); ?></p>
-		<?php get_search_form(); ?>
-	</section><!-- .error-404 -->
+	<div class="grid-container">
+		<div class="grid-x grid-padding-x grid-padding-y">
+			<section class="error-404">
+				<h1><?php esc_html_e( "Oops! That page can't be found.", 'strl' ); ?></h1>
+				<p><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try a search?', 'strl' ); ?></p>
+				<?php get_search_form(); ?>
+			</section><!-- .error-404 -->
+		</div><!-- .grid-container -->
+	</div><!-- .grid-x -->
 </main><!-- #primary -->
 
 <?php

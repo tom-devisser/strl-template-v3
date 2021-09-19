@@ -12,7 +12,7 @@
 
 ?>
 
-<article <?php post_class(); ?>>
+<article <?php post_class( 'cell' ); ?>>
 	<header class="post-header">
 		<?php
 		if ( is_singular() ) {

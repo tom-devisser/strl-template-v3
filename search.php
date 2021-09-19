@@ -14,29 +14,33 @@ get_header();
 ?>
 
 <main id="primary" class="site-main">
-	<?php
-	// Checks if there are search results.
-	if ( have_posts() ) {
-		?>
-		<h2>
-			<?php
-			/* translators: %s: search query */
-			printf( esc_html__( "Search results for '%s'", 'strl' ), get_search_query() );
-			?>
-		</h2>
+	<div class="grid-container">
+		<div class="grid-x grid-padding-x grid-padding-y">
 		<?php
-		while ( have_posts() ) {
-			the_post();
-			// Shows the template for the search results.
-			get_template_part( 'template-parts/content', 'search' );
+		// Checks if there are search results.
+		if ( have_posts() ) {
+			?>
+			<h2>
+				<?php
+				/* translators: %s: search query */
+				printf( esc_html__( "Search results for '%s'", 'strl' ), get_search_query() );
+				?>
+			</h2>
+			<?php
+			while ( have_posts() ) {
+				the_post();
+				// Shows the template for the search results.
+				get_template_part( 'template-parts/content', 'search' );
+			}
+			// Shows pagination for the results.
+			the_posts_navigation();
+		} else {
+			// Shows the template for no posts found.
+			get_template_part( 'template-parts/content', 'none' );
 		}
-		// Shows pagination for the results.
-		the_posts_navigation();
-	} else {
-		// Shows the template for no posts found.
-		get_template_part( 'template-parts/content', 'none' );
-	}
-	?>
+		?>
+		</div><!-- .grid-container -->
+	</div><!-- .grid-x -->
 </main><!-- #primary -->
 
 <?php
