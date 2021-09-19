@@ -24,8 +24,8 @@ get_header();
 			}
 		}
 		?>
-		</div><!-- .grid-container -->
-	</div><!-- .grid-x -->
+		</div><!-- .grid-x -->
+	</div><!-- .grid-container -->
 </main><!-- #primary -->
 
 <?php

@@ -28,8 +28,8 @@ get_header();
 			get_template_part( 'template-parts/content', 'none' );
 		}
 		?>
-		</div><!-- .grid-container -->
-	</div><!-- .grid-x -->
+		</div><!-- .grid-x -->
+	</div><!-- .grid-container -->
 </main><!-- #primary -->
 
 <?php
