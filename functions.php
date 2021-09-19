@@ -14,5 +14,8 @@ require_once get_template_directory() . '/inc/helpers.php';
 // Bootstraps the theme.
 require_once get_template_directory() . '/inc/bootstrap.php';
 
+// Adds user roles.
+require_once get_template_directory() . '/inc/user-roles.php';
+
 // Registers the navigation menus.
 require_once get_template_directory() . '/inc/navigation.php';
