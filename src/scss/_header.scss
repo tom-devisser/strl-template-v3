@@ -1,12 +1,13 @@
 .site-header {
 	background-color: $color-grey-light;
-	padding: 1.5rem 0;
 
 	.site-title {
 		margin: 0;
 	}
 
 	.site-header-inner {
+		padding-top: 1rem;
+		padding-bottom: 1rem;
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
@@ -27,5 +28,16 @@
 		.menu-item:last-child {
 			margin-right: 0;
 		}
+	}
+}
+
+.primary-navigation {
+	.first-sub {
+		margin-top: 1rem;
+	}
+
+	.is-dropdown-submenu {
+		border: 0;
+		box-shadow: $shadow-small;
 	}
 }

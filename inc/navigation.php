@@ -8,6 +8,9 @@
  * @since 1.0.0
  */
 
+// Includes the Walker for the primary menu.
+require_once get_template_directory() . '/inc/classes/class-strl-primary-menu-walker.php';
+
 /**
  * Registers the nav menus.
  *
@@ -33,11 +36,11 @@ function strl_navigation() {
 			array(
 				'container'      => false,
 				'menu_id'        => 'primary-menu',
-				'menu_class'     => 'vertical medium-horizontal menu',
+				'menu_class'     => 'vertical medium-horizontal dropdown menu',
 				'items_wrap'     => '<ul id="%1$s" class="%2$s" data-responsive-menu="accordion medium-dropdown">%3$s</ul>',
 				'theme_location' => 'primary',
 				'fallback_cb'    => false,
-				'walker'         => '',
+				'walker'         => new STRL_Primary_Menu_Walker(),
 			)
 		);
 	}

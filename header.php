@@ -53,12 +53,12 @@
 				?>
 			</div><!-- .site-branding -->
 
-			<nav id="site-navigation" class="main-navigation">
+			<nav id="primary-navigation" class="primary-navigation">
 				<?php strl_main_navigation(); ?>
 			</nav>
 
-			<div class="menu-toggler" data-responsive-toggle="site-navigation" data-hide-for="medium">
-				<button class="menu-icon" type="button" data-toggle="site-navigation"></button>
+			<div class="menu-toggler" data-responsive-toggle="primary-navigation" data-hide-for="medium">
+				<button class="menu-icon" type="button" data-toggle="primary-navigation"></button>
 			</div><!-- .menu-toggler -->
 		</div><!-- .site-header-inner -->
 	</header>
