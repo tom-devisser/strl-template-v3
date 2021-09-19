@@ -13,7 +13,9 @@
 ?>
 
 	<footer class="site-footer">
-		<!-- This is where the footer widgets will be -->
+		<div class="grid-container site-footer-inner">
+			<p class="copyright">&copy; Stuurlui 2021</p>
+		</div>
 	</footer>
 </div><!-- #page .site -->
 <?php wp_footer(); ?>
