@@ -50,8 +50,13 @@
 				}
 				?>
 			</div><!-- .site-branding -->
+
+			<div class="menu-toggler" data-responsive-toggle="site-navigation" data-hide-for="medium">
+				<button class="menu-icon" type="button" data-toggle="site-navigation"></button>
+			</div><!-- .menu-toggler -->
+
 			<nav id="site-navigation" class="main-navigation">
-				<?php wp_nav_menu( 'primary-menu' ); ?>
+				<?php strl_main_navigation(); ?>
 			</nav>
 		</div><!-- .site-header-inner -->
 	</header>
