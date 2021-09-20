@@ -19,3 +19,6 @@ require_once get_template_directory() . '/inc/user-roles.php';
 
 // Registers the navigation menus.
 require_once get_template_directory() . '/inc/navigation.php';
+
+// Configures custom ACF settings.
+require_once get_template_directory() . '/inc/acf.php';

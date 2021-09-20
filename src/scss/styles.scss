@@ -1,10 +1,13 @@
+// Foundation
 @import 'foundation';
 
+// General Styles
 @import 'base';
 @import 'theme';
 @import 'typography';
-
 @import 'components';
-
 @import 'header';
 @import 'footer';
+
+// Block Styles
+@import '../../blocks/header/header';

@@ -14,18 +14,21 @@ get_header();
 ?>
 
 <main id="primary" class="site-main">
-	<div class="grid-container">
-		<div class="grid-x grid-padding-x grid-padding-y">
-		<?php
-		if ( have_posts() ) {
-			while ( have_posts() ) {
-				the_post();
-				get_template_part( 'template-parts/content', 'page' );
+	<?php
+	if ( have_posts() ) {
+		while ( have_posts() ) {
+			the_post();
+			if ( class_exists( 'acf' ) ) {
+				if ( have_rows( 'strl-blocks' ) ) {
+					while ( have_rows( 'strl-blocks' ) ) {
+						the_row();
+						get_template_part( 'blocks/' . get_row_layout() . '/' . get_row_layout() );
+					}
+				}
 			}
 		}
-		?>
-		</div><!-- .grid-x -->
-	</div><!-- .grid-container -->
+	}
+	?>
 </main><!-- #primary -->
 
 <?php
