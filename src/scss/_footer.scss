@@ -2,7 +2,12 @@
 	background-color: $color-grey-light;
 	padding: 1rem 0;
 
+	h2 {
+		font-size: $font-size-h4;
+	}
+
 	.copyright {
 		margin-bottom: 0rem;
+		text-align: center;
 	}
 }

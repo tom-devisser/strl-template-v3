@@ -14,24 +14,13 @@
 	}
 }
 
-.main-navigation {
-	.menu {
-		display: flex;
-		list-style: none;
-		padding-left: 0;
-
-		.menu-item {
-			margin-left: 12px;
-			margin-right: 12px;
-		}
-
-		.menu-item:last-child {
-			margin-right: 0;
-		}
-	}
-}
-
 .primary-navigation {
+	display: none;
+
+	@media (min-width: 40rem) {
+		display: block;
+	}
+
 	.first-sub {
 		margin-top: 1rem;
 	}
@@ -39,5 +28,15 @@
 	.is-dropdown-submenu {
 		border: 0;
 		box-shadow: $shadow-small;
+	}
+}
+
+.site-header {
+	.primary-navigation-menu {
+		background-color: $color-grey-light;
+
+		@media (min-width: 40rem) {
+			display: none !important;
+		}
 	}
 }

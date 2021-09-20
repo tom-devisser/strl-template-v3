@@ -30,7 +30,7 @@
 			</div>
 
 			<div class="grid-x site-footer-inner">
-				<div class="cell medium-6">
+				<div class="cell">
 					<p class="copyright">&copy; Stuurlui 2021</p>
 				</div>
 			</div>

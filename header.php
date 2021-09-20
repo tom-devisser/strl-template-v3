@@ -57,8 +57,12 @@
 				<?php strl_main_navigation(); ?>
 			</nav>
 
-			<div class="menu-toggler" data-responsive-toggle="primary-navigation" data-hide-for="medium">
-				<button class="menu-icon" type="button" data-toggle="primary-navigation"></button>
+			<div class="menu-toggler" data-responsive-toggle="primary-navigation-menu" data-hide-for="medium">
+				<button class="menu-icon" type="button" data-toggle="primary-navigation-menu"></button>
 			</div><!-- .menu-toggler -->
 		</div><!-- .site-header-inner -->
+
+		<nav id="primary-navigation-menu" class="primary-navigation-menu">
+			<?php strl_main_navigation(); ?>
+		</nav>
 	</header>
