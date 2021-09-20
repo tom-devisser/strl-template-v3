@@ -1,12 +1,14 @@
 .site-footer {
 	background-color: $color-grey-light;
-	padding: 1rem 0;
+	padding-top: 2rem;
+	padding-bottom: 2rem;
 
 	h2 {
 		font-size: $font-size-h4;
 	}
 
 	.copyright {
+		padding-top: 2rem;
 		margin-bottom: 0rem;
 		text-align: center;
 	}

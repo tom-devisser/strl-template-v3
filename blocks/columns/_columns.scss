@@ -1,4 +1,15 @@
 .columns-section {
 	margin-top: 2rem;
 	margin-bottom: 2rem;
+
+	.columns-column {
+		padding: 2rem;
+		
+		.columns-thumbnail {
+			height: 12rem;
+			margin-bottom: 1rem;
+			object-fit: cover;
+			width: 100%;
+		}
+	}
 }

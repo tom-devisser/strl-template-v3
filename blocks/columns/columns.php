@@ -20,9 +20,25 @@ $columns = get_sub_field( $prefix . 'repeater' );
 		if ( have_rows( $prefix . 'repeater' ) ) {
 			while ( have_rows( $prefix . 'repeater' ) ) {
 				the_row();
+
+				// Column Field Values.
+				$image   = get_sub_field( $prefix . 'image' );
+				$content = get_sub_field( $prefix . 'content' );
+				if ( $image ) {
+					$image_url = $image['sizes']['large'];
+					$image_alt = $image['alt'];
+				}
+
 				?>
-				<div class="cell">
-					<?php the_sub_field( $prefix . 'text' ); ?>
+				<div class="cell <?php echo esc_textarea( $prefix ) . 'column'; ?>">
+					<?php
+					if ( $image ) {
+						?>
+						<img class="<?php echo esc_textarea( $prefix ) . 'thumbnail'; ?>" src="<?php echo esc_url( $image_url ); ?>" alt="<?php echo esc_textarea( $image_alt ); ?>">
+						<?php
+					}
+					?>
+					<?php echo wp_kses_post( apply_filters( 'the_content', $content ) ); ?>
 				</div>
 				<?php
 			}
