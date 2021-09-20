@@ -34,7 +34,9 @@ $columns = get_sub_field( $prefix . 'repeater' );
 					<?php
 					if ( $image ) {
 						?>
-						<img class="<?php echo esc_textarea( $prefix ) . 'thumbnail'; ?>" src="<?php echo esc_url( $image_url ); ?>" alt="<?php echo esc_textarea( $image_alt ); ?>">
+						<div class="image-box">
+							<img class="<?php echo esc_textarea( $prefix ) . 'thumbnail'; ?>" src="<?php echo esc_url( $image_url ); ?>" alt="<?php echo esc_textarea( $image_alt ); ?>">
+						</div>
 						<?php
 					}
 					?>
