@@ -9,7 +9,7 @@
  */
 
 // Includes the Walker for the primary menu.
-require_once get_template_directory() . '/inc/classes/class-strl-primary-menu-walker.php';
+require_once THEME_DIR . '/inc/classes/class-strl-primary-menu-walker.php';
 
 /**
  * Registers the nav menus.

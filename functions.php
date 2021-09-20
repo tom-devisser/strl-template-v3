@@ -8,17 +8,19 @@
  * @since 1.0.0
  */
 
+define( 'THEME_DIR', get_stylesheet_directory() );
+
 // Includes helper functions.
-require_once get_template_directory() . '/inc/helpers.php';
+require_once THEME_DIR . '/inc/helpers.php';
 
 // Bootstraps the theme.
-require_once get_template_directory() . '/inc/bootstrap.php';
+require_once THEME_DIR . '/inc/bootstrap.php';
 
 // Adds user roles.
-require_once get_template_directory() . '/inc/user-roles.php';
+require_once THEME_DIR . '/inc/user-roles.php';
 
 // Registers the navigation menus.
-require_once get_template_directory() . '/inc/navigation.php';
+require_once THEME_DIR . '/inc/navigation.php';
 
 // Configures custom ACF settings.
-require_once get_template_directory() . '/inc/acf.php';
+require_once THEME_DIR . '/inc/acf.php';

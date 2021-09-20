@@ -15,7 +15,7 @@ if ( ! function_exists( 'strl_setup' ) ) {
 	 */
 	function strl_setup() {
 		// Make the theme translatable.
-		load_theme_textdomain( 'strl', get_template_directory() . '/languages' );
+		load_theme_textdomain( 'strl', THEME_DIR . '/languages' );
 
 		// Adds the <title> tag dynamically.
 		add_theme_support( 'title-tag' );

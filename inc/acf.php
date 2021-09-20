@@ -17,7 +17,7 @@ function strl_register_blocks() {
 	$blocks = array();
 
 	// The path to the blocks directory.
-	$blocks_dir = get_stylesheet_directory() . '/blocks/';
+	$blocks_dir = THEME_DIR . '/blocks/';
 
 	// Gets all the folder names in /blocks except . and .., and puts them in an array.
 	$block_names = array_diff( scandir( $blocks_dir ), array( '..', '.' ) );
