@@ -85,6 +85,7 @@ add_action( 'wp_enqueue_scripts', 'strl_scripts' );
  */
 function strl_admin_scripts() {
 	// Add admin scripts and stylesheets.
+	wp_enqueue_style( 'strl-backend-styles', get_template_directory_uri() . '/assets/backend-styles.min.css', array(), time() );
 }
 add_action( 'admin_enqueue_scripts', 'strl_admin_scripts' );
 

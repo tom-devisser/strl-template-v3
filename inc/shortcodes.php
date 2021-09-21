@@ -38,9 +38,7 @@ function strl_button_shortcode( $atts, $content ) {
 		href="<?php echo esc_url( $url, array( 'tel', 'mailto', 'https' ) ); ?>"
 		class="btn-<?php echo esc_textarea( $type ); ?>"
 		target="<?php echo ( 'blank' === $target ) ? '_blank' : '_self'; ?>"
-	>
-		<?php echo esc_textarea( $content ); ?>
-	</a>
+	><?php echo esc_textarea( $content ); ?></a>
 	<?php
 
 	return ob_get_clean();

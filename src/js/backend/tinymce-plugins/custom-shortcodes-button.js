@@ -3,11 +3,13 @@
 // Creates shortcode button and adds button objects to it.
 ( function createShortcodesButton() {
 	tinymce.create( 'tinymce.plugins.strl_buttons', {
-		init( editor ) {
+		init( editor, url ) {
+			url = url.replace( '/js', '' );
+
 			// Creates and adds custom buttons to TinyMCE Editor
 			editor.addButton( 'strl_shortcodes', {
 				title: 'STRL',
-				text: 'STRL',
+				image: url + '/img/icon-STRL-blauw.svg',
 				type: 'menubutton',
 				menu: [ {
 					text: 'Button',

@@ -32,12 +32,26 @@ function tinymcejs() {
 }
 
 function scss() {
-	return src( 'src/scss/styles.scss' )
+	return src( [ 'src/scss/styles.scss', '!src/scss/backend/*.scss' ] )
 		.pipe( sass() )
 		.pipe( prefix() )
 		.pipe( minify() )
 		.pipe( rename( 'styles.min.css' ) )
 		.pipe( dest( 'assets/' ) );
+}
+
+function backendscss() {
+	return src( 'src/scss/backend/*.scss' )
+		.pipe( sass() )
+		.pipe( prefix() )
+		.pipe( minify() )
+		.pipe( rename( 'backend-styles.min.css' ) )
+		.pipe( dest( 'assets/' ) );
+}
+
+function images() {
+	return src( 'src/img/*.{jpeg,png,svg}' )
+		.pipe( dest( 'assets/img/' ) );
 }
 
 function foundation() {
@@ -63,14 +77,18 @@ function vendor() {
 
 exports.scss = scss;
 exports.js = js;
+exports.images = images;
 exports.tinymcejs = tinymcejs;
 exports.backendjs = backendjs;
+exports.backendscss = backendscss;
 exports.foundation = foundation;
 exports.vendor = vendor;
 exports.watch = function() {
 	watch( [ 'src/js/**/*.js', '!src/js/backend/*.js', '!src/js/backend/tinymce-plugins/*.js' ], js );
 	watch( [ 'src/js/backend/*.js', '!src/js/backend/tinymce-plugins/*.js' ], backendjs );
 	watch( 'src/js/backend/tinymce-plugins/*.js', tinymcejs );
-	watch( [ 'src/scss/**/*.scss', 'blocks/**/*.scss' ], scss );
+	watch( [ 'src/scss/**/*.scss', 'blocks/**/*.scss', '!src/scss/backend/*.scss' ], scss );
+	watch( 'src/scss/backend/*.scss', backendscss );
+	watch( 'src/img/*', images );
 };
-exports.default = parallel( vendor, foundation, js, scss, backendjs, tinymcejs );
+exports.default = parallel( images, vendor, foundation, js, scss, backendjs, tinymcejs, backendscss );
