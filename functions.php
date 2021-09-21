@@ -29,4 +29,6 @@ require_once THEME_DIR . '/inc/user-roles.php';
 require_once THEME_DIR . '/inc/navigation.php';
 
 // Configures custom ACF settings.
-require_once THEME_DIR . '/inc/acf.php';
+if ( class_exists( 'acf' ) ) {
+	require_once THEME_DIR . '/inc/acf.php';
+}
