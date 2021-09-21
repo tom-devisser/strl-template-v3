@@ -63,13 +63,19 @@
 							title: 'Accordion',
 							body: [ {
 								type: 'textbox',
+								id: 'accordion-title',
+								name: 'title',
+								label: 'Title',
+								value: '',
+							}, {
+								type: 'textbox',
 								id: 'accordion-text',
 								name: 'text',
 								label: 'Text',
 								value: '',
 							} ],
 							onsubmit( window ) {
-								editor.insertContent( '[accordion]' + window.data.text + '[/accordion]' );
+								editor.insertContent( '[accordion title="' + window.data.title + '"]' + window.data.text + '[/accordion]' );
 							},
 						} );
 					},

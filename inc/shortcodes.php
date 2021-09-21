@@ -40,7 +40,42 @@ function strl_button_shortcode( $atts, $content ) {
 		target="<?php echo ( 'blank' === $target ) ? '_blank' : '_self'; ?>"
 	><?php echo esc_textarea( $content ); ?></a>
 	<?php
-
 	return ob_get_clean();
 }
 add_shortcode( 'button', 'strl_button_shortcode' );
+
+/**
+ * Registers the accordion shortcode.
+ *
+ * @package strl
+ * @since 1.0.0
+ *
+ * @param array  $atts    User defined attributes in shortcode tag.
+ * @param string $content The string placed between the shortcode tags, if any.
+ */
+function strl_accordion_shortcode( $atts, $content ) {
+	// Replace the default values with the $atts if there are any.
+	$args = shortcode_atts(
+		array(
+			'title' => '',
+			'inner' => '',
+		),
+		$atts
+	);
+
+	$title = $args['title'];
+
+	ob_start();
+	?>
+	<ul class="accordion" data-accordion data-allow-all-closed="true">
+		<li class="accordion-item" data-accordion-item>
+			<a href="#" class="accordion-title"><?php echo esc_textarea( $title ); ?></a>
+			<div class="accordion-content" data-tab-content>
+				<p><?php echo wp_kses_post( $content ); ?></p>
+			</div>
+		</li>
+	</ul>
+	<?php
+	return ob_get_clean();
+}
+add_shortcode( 'accordion', 'strl_accordion_shortcode' );
