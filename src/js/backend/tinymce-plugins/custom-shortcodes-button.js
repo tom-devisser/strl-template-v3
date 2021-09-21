@@ -1,7 +1,7 @@
 /* globals tinymce */
 
 // Creates shortcode button and adds button objects to it.
-( function createShortcodesButton() {
+( function() {
 	tinymce.create( 'tinymce.plugins.strl_buttons', {
 		init( editor, url ) {
 			url = url.replace( '/js', '' );
