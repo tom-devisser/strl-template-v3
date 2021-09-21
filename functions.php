@@ -16,6 +16,9 @@ require_once THEME_DIR . '/inc/helpers.php';
 // Bootstraps the theme.
 require_once THEME_DIR . '/inc/bootstrap.php';
 
+// Adds shortcodes.
+require_once THEME_DIR . '/inc/shortcodes.php';
+
 // Customizes the admin area.
 require_once THEME_DIR . '/inc/admin.php';
 
