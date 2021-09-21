@@ -35,3 +35,6 @@ require_once THEME_DIR . '/inc/navigation.php';
 if ( class_exists( 'acf' ) ) {
 	require_once THEME_DIR . '/inc/acf.php';
 }
+
+// Configures custom FacetWP settings.
+require_once THEME_DIR . '/inc/facetwp.php';

@@ -1,0 +1,29 @@
+.grid-service-card {
+	box-shadow: $shadow-small;
+	height: 100%;
+
+	.content {
+		padding: 1.6rem;
+
+		.categories {
+			color: $color-primary;
+			font-size: $font-size-s;
+			font-weight: 500;
+			text-transform: uppercase;
+
+			a {
+				color: inherit;
+			}
+		}
+
+		.tag-badge {
+			background-color: $color-secondary;
+			border-radius: 1rem;
+			color: $color-white;
+			font-size: $font-size-xs;
+			margin-right: 0.2rem;
+			padding: 0.2rem 0.6rem;
+			text-transform: uppercase;
+		}
+	}
+}

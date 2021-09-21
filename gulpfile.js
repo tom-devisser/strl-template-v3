@@ -41,7 +41,7 @@ function scss() {
 }
 
 function backendscss() {
-	return src( 'src/scss/backend/*.scss' )
+	return src( 'src/scss/backend/backend.scss' )
 		.pipe( sass() )
 		.pipe( prefix() )
 		.pipe( minify() )
