@@ -20,17 +20,21 @@ function strl_register_services_cpt() {
 
 	$args = array(
 		'labels'             => $labels,
+		'menu_icon'          => 'dashicons-admin-tools',
+		'description'        => __( 'All services you offer.', 'strl' ),
 		'public'             => true,
 		'publicly_queryable' => true,
 		'show_ui'            => true,
 		'show_in_menu'       => true,
 		'query_var'          => true,
-		'rewrite'            => array( 'slug' => 'book' ),
+		'rewrite'            => array( 'slug' => 'service' ),
 		'capability_type'    => 'post',
 		'has_archive'        => true,
 		'hierarchical'       => false,
 		'menu_position'      => null,
-		'supports'           => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'comments' ),
+		'supports'           => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt' ),
+		'taxonomies'         => array( 'category', 'post_tag' ),
+		'show_in_rest'       => true,
 	);
 
 	register_post_type( 'services', $args );
