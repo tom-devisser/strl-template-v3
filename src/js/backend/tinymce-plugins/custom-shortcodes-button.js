@@ -22,9 +22,33 @@
 								name: 'text',
 								label: 'Text',
 								value: '',
+							}, {
+								type: 'textbox',
+								id: 'button-url',
+								name: 'url',
+								label: 'Link',
+								value: '',
+							}, {
+								type: 'listbox',
+								id: 'button-target',
+								name: 'target',
+								label: 'Target',
+								values: [
+									{ value: 'self', text: 'Current window (recommended for internal links)' },
+									{ value: 'blank', text: 'Open in a new tab (recommended for external links)' },
+								],
+							}, {
+								type: 'listbox',
+								id: 'button-type',
+								name: 'type',
+								label: 'Type',
+								values: [
+									{ value: 'primary', text: 'Primary' },
+									{ value: 'secondary', text: 'Secondary' },
+								],
 							} ],
 							onsubmit( window ) {
-								editor.insertContent( '[button]' + window.data.text + '[/button]' );
+								editor.insertContent( '[button url="' + window.data.url + '" target="' + window.data.target + '" type="' + window.data.type + '"]' + window.data.text + '[/button]' );
 							},
 						} );
 					},
