@@ -8,14 +8,30 @@ const sass = require( 'gulp-sass' )( require( 'sass' ) );
 const rename = require( 'gulp-rename' );
 
 function js() {
-	return src( 'src/js/*.js' )
+	return src( [ 'src/js/*.js', '!src/js/backend/*.js' ] )
 		.pipe( concat( 'scripts.min.js' ) )
 		.pipe( babel() )
 		.pipe( terser() )
 		.pipe( dest( 'assets/' ) );
 }
 
-function css() {
+function backendjs() {
+	return src( [ 'src/js/backend/*.js', '!src/js/backend/tinymce-plugins/*' ] )
+		.pipe( concat( 'backend.min.js' ) )
+		.pipe( babel() )
+		.pipe( terser() )
+		.pipe( dest( 'assets/' ) );
+}
+
+function tinymcejs() {
+	return src( 'src/js/backend/tinymce-plugins/*.js' )
+		.pipe( concat( 'tinymce-plugins.min.js' ) )
+		.pipe( babel() )
+		.pipe( terser() )
+		.pipe( dest( 'assets/' ) );
+}
+
+function scss() {
 	return src( 'src/scss/styles.scss' )
 		.pipe( sass() )
 		.pipe( prefix() )
@@ -45,12 +61,16 @@ function vendor() {
 		.pipe( dest( 'assets/' ) );
 }
 
-exports.css = css;
+exports.scss = scss;
 exports.js = js;
+exports.tinymcejs = tinymcejs;
+exports.backendjs = backendjs;
 exports.foundation = foundation;
 exports.vendor = vendor;
 exports.watch = function() {
-	watch( 'src/js/*.js', js );
-	watch( 'src/scss/**/*.scss', css );
+	watch( [ 'src/js/**/*.js', '!src/js/backend/*.js', '!src/js/backend/tinymce-plugins/*.js' ], js );
+	watch( [ 'src/js/backend/*.js', '!src/js/backend/tinymce-plugins/*.js' ], backendjs );
+	watch( 'src/js/backend/tinymce-plugins/*.js', tinymcejs );
+	watch( [ 'src/scss/**/*.scss', 'blocks/**/*.scss' ], scss );
 };
-exports.default = parallel( vendor, foundation, js, css );
+exports.default = parallel( vendor, foundation, js, scss, backendjs, tinymcejs );

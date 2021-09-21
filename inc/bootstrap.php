@@ -10,8 +10,10 @@ if ( ! function_exists( 'strl_setup' ) ) {
 	/**
 	 * Sets up theme defaults and registers support for various WordPress features.
 	 *
-	 * @return void
+	 * @package strl
 	 * @since 1.0.0
+	 *
+	 * @return void
 	 */
 	function strl_setup() {
 		// Make the theme translatable.
@@ -74,6 +76,17 @@ function strl_scripts() {
 	wp_enqueue_style( 'strl-styles', get_template_directory_uri() . '/assets/styles.min.css', array(), time() );
 }
 add_action( 'wp_enqueue_scripts', 'strl_scripts' );
+
+/**
+ * Enqueues admin scripts and styles.
+ *
+ * @package strl
+ * @since 1.0.0
+ */
+function strl_admin_scripts() {
+	// Add admin scripts and stylesheets.
+}
+add_action( 'admin_enqueue_scripts', 'strl_admin_scripts' );
 
 /**
  * Registers widget areas.

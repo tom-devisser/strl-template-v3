@@ -9,10 +9,10 @@
 /**
  * A preformatted version of var_dump().
  *
- * @param mixed $variable The variable you'd like to dump.
- *
  * @package strl
  * @since 1.0.0
+ *
+ * @param mixed $variable The variable you'd like to dump.
  */
 function strl_dump( $variable ) {
 	echo '<pre>';
