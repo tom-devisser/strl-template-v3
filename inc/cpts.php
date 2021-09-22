@@ -15,7 +15,7 @@
 function strl_register_services_cpt() {
 	$singular_label = __( 'service', 'strl' );
 	$plural_label   = __( 'services', 'strl' );
-	$labels         = strl_generate_labels( $singular_label, $plural_label );
+	$labels         = strl_generate_cpt_labels( $singular_label, $plural_label );
 
 	$args = array(
 		'labels'             => $labels,
@@ -31,7 +31,7 @@ function strl_register_services_cpt() {
 		'hierarchical'       => false,
 		'menu_position'      => null,
 		'supports'           => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt' ),
-		'taxonomies'         => array( 'category', 'post_tag' ),
+		'taxonomies'         => array( 'post_tag', 'service_category' ),
 		'show_in_rest'       => true,
 	);
 

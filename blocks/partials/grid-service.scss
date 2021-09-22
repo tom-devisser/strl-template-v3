@@ -10,6 +10,15 @@
 			font-size: $font-size-s;
 			font-weight: 500;
 			text-transform: uppercase;
+			margin-bottom: 0;
+
+			.category {
+				margin-right: 0.4rem;
+
+				&:last-child {
+					margin-right: 0;
+				}
+			}
 
 			a {
 				color: inherit;
@@ -22,8 +31,7 @@
 		}
 
 		.tag-badge {
-			background-color: $color-secondary;
-			border-radius: 1rem;
+			background-color: $color-secondary-light;
 			color: $color-white;
 			font-size: $font-size-xs;
 			margin-right: 0.4rem;

@@ -19,6 +19,9 @@ require_once THEME_DIR . '/inc/bootstrap.php';
 // Registers custom post types.
 require_once THEME_DIR . '/inc/cpts.php';
 
+// Registers custom taxonomies.
+require_once THEME_DIR . '/inc/taxonomies.php';
+
 // Adds shortcodes.
 require_once THEME_DIR . '/inc/shortcodes.php';
 

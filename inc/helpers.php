@@ -29,7 +29,7 @@ function strl_dump( $variable ) {
  * @param string $singular_label The singular CPT name.
  * @param string $plural_label   The plural CPT name.
  */
-function strl_generate_labels( $singular_label, $plural_label ) {
+function strl_generate_cpt_labels( $singular_label, $plural_label ) {
 	$pretty_singular = ucwords( $singular_label );
 	$pretty_plural   = ucwords( $plural_label );
 
@@ -74,5 +74,47 @@ function strl_generate_labels( $singular_label, $plural_label ) {
 		'items_list_navigation' => sprintf( __( '%s list navigation', 'strl' ), $pretty_plural ),
 		// translators: %s is the plural label of a post type.
 		'items_list'            => sprintf( __( '%s list', 'strl' ), $pretty_plural ),
+	);
+}
+
+/**
+ * Returns an array with labels for a taxonomy.
+ *
+ * @package strl
+ * @since 1.0.0
+ *
+ * @param string $singular_label The singular taxonomy name.
+ * @param string $plural_label   The plural taxonomy name.
+ */
+function strl_generate_taxonomy_labels( $singular_label, $plural_label ) {
+	$pretty_singular = ucwords( $singular_label );
+	$pretty_plural   = ucwords( $plural_label );
+
+	return array(
+		'name'              => $pretty_plural,
+		'singular_name'     => $pretty_singular,
+		// translators: %s is the plural label of a post type.
+		'search_items'      => sprintf( __( 'Search %s', 'strl' ), $pretty_plural ),
+		// translators: %s is the plural label of a post type.
+		'all_items'         => sprintf( __( 'All %s', 'strl' ), $pretty_plural ),
+		// translators: %s is the singular label of a post type.
+		'view_item'         => sprintf( __( 'View %s', 'strl' ), $pretty_singular ),
+		// translators: %s is the plural label of a post type.
+		'parent_item'       => sprintf( __( 'Parent %s', 'strl' ), $pretty_plural ),
+		// translators: %s is the plural label of a post type.
+		'parent_item_colon' => sprintf( __( 'Parent %s:', 'strl' ), $pretty_plural ),
+		// translators: %s is the singular label of a post type.
+		'edit_item'         => sprintf( __( 'Edit %s', 'strl' ), $pretty_singular ),
+		// translators: %s is the singular label of a post type.
+		'update_item'       => sprintf( __( 'Update %s', 'strl' ), $pretty_singular ),
+		// translators: %s is the singular label of a post type.
+		'add_new_item'      => sprintf( __( 'Add New %s', 'strl' ), $pretty_singular ),
+		// translators: %s is the singular label of a post type.
+		'new_item_name'     => sprintf( __( 'New %s name', 'strl' ), $pretty_singular ),
+		// translators: %s is the plural label of a post type.
+		'not_found'         => sprintf( __( 'No %s found', 'strl' ), $pretty_plural ),
+		// translators: %s is the plural label of a post type.
+		'back_to_items'     => sprintf( __( 'Back to %s', 'strl' ), $pretty_plural ),
+		'menu_name'         => $pretty_plural,
 	);
 }
