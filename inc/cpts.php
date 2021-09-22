@@ -15,8 +15,7 @@
 function strl_register_services_cpt() {
 	$singular_label = __( 'service', 'strl' );
 	$plural_label   = __( 'services', 'strl' );
-
-	$labels = strl_generate_labels( $singular_label, $plural_label );
+	$labels         = strl_generate_labels( $singular_label, $plural_label );
 
 	$args = array(
 		'labels'             => $labels,
