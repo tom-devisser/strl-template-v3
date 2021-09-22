@@ -24,7 +24,7 @@ function strl_customize_facetwp_classes( $output, $atts ) {
 				$output = str_replace( 'facetwp-template', 'grid-x grid-margin-x grid-margin-y medium-up-2 large-up-3', $output );
 				break;
 			default:
-				$output = str_replace( 'facetwp-template', 'grid-x medium-up-3 large-up-4', $output );
+				$output = str_replace( 'facetwp-template', 'grid-x medium-up-2 large-up-3', $output );
 				break;
 		}
 	}
