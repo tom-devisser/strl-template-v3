@@ -1,27 +1,15 @@
 .columns-section {
-	margin-top: 2rem;
-	margin-bottom: 2rem;
+	margin-top: 1.875rem;
+	margin-bottom: 1.875rem;
 
 	.columns-column {
 		padding: 2rem;
 		overflow: hidden;
 
-		.image-box {
-			height: 12rem;
-			margin-bottom: 1rem;
-			overflow: hidden;
-			width: 100%;
-		}
-
 		.columns-thumbnail {
 			height: 100%;
 			object-fit: cover;
-			transition: $transition-slow;
 			width: 100%;
-
-			&:hover {
-				transform: scale( 1.15 );
-			}
 		}
 	}
 }

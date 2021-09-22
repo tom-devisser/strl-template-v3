@@ -1,3 +1,19 @@
 a {
 	transition: $transition-default;
 }
+
+.image-box {
+	height: 12rem;
+	margin-bottom: 1rem;
+	width: 100%;
+	overflow: hidden;
+
+	.zoom-on-hover {
+		object-fit: cover;
+		transition: $transition-slow;
+
+		&:hover {
+			transform: scale( 1.15 );
+		}
+	}
+}
