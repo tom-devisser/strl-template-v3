@@ -16,14 +16,21 @@
 			}
 		}
 
+		.tag-badges {
+			display: flex;
+			flex-wrap: wrap;
+		}
+
 		.tag-badge {
 			background-color: $color-secondary;
 			border-radius: 1rem;
 			color: $color-white;
 			font-size: $font-size-xs;
-			margin-right: 0.2rem;
-			padding: 0.2rem 0.6rem;
+			margin-right: 0.4rem;
+			margin-bottom: 0.4rem;
+			padding: 0.4rem 0.8rem;
 			text-transform: uppercase;
+			white-space: nowrap;
 		}
 	}
 }

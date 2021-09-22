@@ -19,9 +19,11 @@ $post_tags = get_the_terms( get_the_ID(), 'post_tag' );
 			<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
 			<?php
 			if ( $post_tags ) {
+				echo '<div class="tag-badges">';
 				foreach ( $post_tags as $post_tag ) {
 					echo '<span class="tag-badge">' . esc_textarea( $post_tag->name ) . '</span>';
 				}
+				echo '</div>';
 			}
 			?>
 			<p><?php the_excerpt(); ?></p>
