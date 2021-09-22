@@ -1,5 +1,15 @@
+main {
+	height: 100%;
+}
+
 a {
 	transition: $transition-default;
+	color: $color-secondary-dark;
+
+	&:hover {
+		color: $color-primary;
+		text-decoration: underline;
+	}
 }
 
 .image-box {

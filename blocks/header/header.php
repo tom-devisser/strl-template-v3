@@ -10,7 +10,7 @@ $blockname = basename( __FILE__, '.php' );
 $prefix    = $blockname . '-';
 
 // Block Field Values.
-$header_title    = get_sub_field( $prefix . 'title' );
+$header_title    = ! empty( $args['title'] ) ? $args['title'] : get_sub_field( $prefix . 'title' );
 $header_subtitle = get_sub_field( $prefix . 'subtitle' );
 
 ?>
@@ -21,7 +21,7 @@ $header_subtitle = get_sub_field( $prefix . 'subtitle' );
 			<div class="breadcrumbs" typeof="BreadcrumbList" vocab="https://schema.org/">
 				<?php function_exists( 'bcn_display' ) ? bcn_display() : ''; ?>
 			</div>
-			<h1><?php echo esc_textarea( $header_title ); ?></h1>
+			<h1><?php echo wp_kses_post( $header_title ); ?></h1>
 		<?php
 		if ( isset( $header_subtitle ) ) {
 			?>

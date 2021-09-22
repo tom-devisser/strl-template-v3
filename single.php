@@ -15,6 +15,7 @@ get_header();
 ?>
 
 <main id="primary" class="site-main">
+	<?php get_template_part( 'blocks/header/header', '', array( 'title' => get_the_title() ) ); ?>
 	<div class="grid-container">
 		<div class="grid-x grid-padding-x grid-padding-y">
 		<?php

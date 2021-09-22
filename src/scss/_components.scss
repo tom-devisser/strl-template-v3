@@ -47,4 +47,14 @@
 
 .breadcrumbs {
 	font-size: 0.875rem;
+
+	a span {
+		color: $color-white;
+		transition: $transition-slow;
+
+		&:hover {
+			text-decoration: underline;
+			color: $color-secondary-light;
+		}
+	}
 }
