@@ -79,8 +79,7 @@ exports.scss = scss;
 exports.js = js;
 exports.images = images;
 exports.tinymcejs = tinymcejs;
-exports.backendjs = backendjs;
-exports.backendscss = backendscss;
+exports.backend = parallel( backendjs, backendscss );
 exports.foundation = foundation;
 exports.vendor = vendor;
 exports.watch = function() {
@@ -91,4 +90,4 @@ exports.watch = function() {
 	watch( 'src/scss/backend/*.scss', backendscss );
 	watch( 'src/img/*', images );
 };
-exports.default = parallel( images, vendor, foundation, js, scss, backendjs, tinymcejs, backendscss );
+exports.default = parallel( images, vendor, foundation, js, scss, backendscss, backendjs, tinymcejs );
