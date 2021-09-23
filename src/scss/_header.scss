@@ -29,6 +29,52 @@
 		border: 0;
 		box-shadow: $shadow-small;
 	}
+
+	// The arrow for a submenu parent if it's in the topbar.
+	.dropdown.menu.medium-horizontal>li.is-dropdown-submenu-parent>a::after {
+		border-color: $color-primary-dark transparent transparent;
+	}
+
+	// The arrow for a submenu parent if the submenu opens to the right.
+	.is-dropdown-submenu .is-dropdown-submenu-parent.opens-right > a::after {
+		border-color: transparent transparent transparent $color-primary-dark;
+	}
+
+	// The arrow for a submenu parent if the submenu opens to the left.
+	.is-dropdown-submenu .is-dropdown-submenu-parent.opens-left > a::after {
+		border-color: transparent $color-primary-dark transparent transparent;
+	}
+
+	// The color for the active menu item in a dropdown.
+	.dropdown.menu > li.is-active > a {
+		color: $color-primary;
+	}
+
+	.menu {
+		.is-active > a {
+			background-color: $color-secondary;
+			color: $color-white;
+		}
+	}
+}
+
+.menu-icon {
+	&::after {
+		background-color: $color-primary;
+		box-shadow: 0 7px 0 $color-primary, 0 14px 0 $color-primary;
+	}
+
+	&:hover {
+		&::after {
+			background-color: $color-secondary-light;
+			box-shadow: 0 7px 0 $color-secondary-light, 0 14px 0 $color-secondary-light;
+		}
+	}
+}
+
+// The arrow for a submenu parent if in an accordion menu.
+.accordion-menu .is-accordion-submenu-parent:not(.has-submenu-toggle) > a::after {
+	border-color: $color-primary-dark transparent transparent;
 }
 
 .site-header {

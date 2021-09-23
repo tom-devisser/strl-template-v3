@@ -30,8 +30,8 @@ function strl_register_services_cpt() {
 		'has_archive'        => true,
 		'hierarchical'       => false,
 		'menu_position'      => null,
-		'supports'           => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt' ),
-		'taxonomies'         => array( 'post_tag', 'service_category' ),
+		'supports'           => array( 'title', 'editor', 'thumbnail', 'excerpt' ),
+		'taxonomies'         => array( 'service_category' ),
 		'show_in_rest'       => true,
 	);
 

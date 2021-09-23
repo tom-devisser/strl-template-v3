@@ -6,8 +6,8 @@
  * @since 1.0.0
  */
 
-$post_tags  = get_the_terms( get_the_ID(), 'post_tag' );
-$categories = get_the_terms( get_the_ID(), 'service_category' );
+$service_tags       = get_the_terms( get_the_ID(), 'service_tags' );
+$service_categories = get_the_terms( get_the_ID(), 'service_category' );
 ?>
 <div class="cell medium-4">
 	<div class="grid-service-card">
@@ -16,20 +16,20 @@ $categories = get_the_terms( get_the_ID(), 'service_category' );
 		</div>
 		<div class="content">
 			<?php
-			if ( $categories ) {
+			if ( $service_categories ) {
 				echo '<p class="categories">';
-				foreach ( $categories as $category ) {
-					echo '<span class="category">' . esc_textarea( $category->name ) . '</span>';
+				foreach ( $service_categories as $service_category ) {
+					echo '<span class="category">' . esc_textarea( $service_category->name ) . '</span>';
 				}
 				echo '</p>';
 			}
 			?>
 			<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
 			<?php
-			if ( $post_tags ) {
+			if ( ! empty( $service_tags ) ) {
 				echo '<div class="tag-badges">';
-				foreach ( $post_tags as $post_tag ) {
-					echo '<span class="tag-badge">' . esc_textarea( $post_tag->name ) . '</span>';
+				foreach ( $service_tags as $service_tag ) {
+					echo '<span class="tag-badge">' . esc_textarea( $service_tag->name ) . '</span>';
 				}
 				echo '</div>';
 			}

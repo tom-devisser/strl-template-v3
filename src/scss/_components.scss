@@ -8,7 +8,7 @@
 	display: inline-block;
 
 	&:hover {
-		box-shadow: $shadow-small;
+		text-decoration: none;
 		color: $color-white
 	}
 }
@@ -37,6 +37,10 @@
 
 .accordion {
 	margin-top: 1rem;
+
+	.accordion-title {
+		color: $color-primary;
+	}
 
 	ul {
 		margin-bottom: 1rem;
