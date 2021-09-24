@@ -133,3 +133,34 @@ function strl_last_login_column_value( $output, $column_name, $user_id ) {
 	return $output;
 }
 add_filter( 'manage_users_custom_column', 'strl_last_login_column_value', 10, 3 );
+
+
+/**
+ * Adds the Last Login column to sortable columns.
+ *
+ * @package strl
+ * @since 1.0.0
+ *
+ * @param array<string> $sortable_columns An array of sortable column names.
+ */
+function strl_make_last_login_sortable( $sortable_columns ) {
+	$sortable_columns['last_login'] = 'last_login';
+	return $sortable_columns;
+}
+add_filter( 'manage_users_sortable_columns', 'strl_make_last_login_sortable' );
+
+/**
+ * Sets the last login time as the order value.
+ *
+ * @package strl
+ * @since 1.0.0
+ *
+ * @param WP_User_Query $user_query The WP_User_Query instance.
+ */
+function strl_set_last_login_order_value( $user_query ) {
+	if ( 'last_login' === $user_query->get( 'orderby' ) ) {
+		$user_query->set( 'orderby', 'meta_value' );
+		$user_query->set( 'meta_key', 'last_login' );
+	}
+}
+add_filter( 'pre_get_users', 'strl_set_last_login_order_value' );
