@@ -28,6 +28,7 @@ function strl_dump( $variable ) {
  *
  * @param string $singular_label The singular CPT name.
  * @param string $plural_label   The plural CPT name.
+ * @return array<string>         An array of strings containing all the labels for a CPT.
  */
 function strl_generate_cpt_labels( $singular_label, $plural_label ) {
 	$pretty_singular = ucwords( $singular_label );
@@ -85,6 +86,7 @@ function strl_generate_cpt_labels( $singular_label, $plural_label ) {
  *
  * @param string $singular_label The singular taxonomy name.
  * @param string $plural_label   The plural taxonomy name.
+ * @return array<string>         An array of strings containing all the labels for a taxonomy.
  */
 function strl_generate_taxonomy_labels( $singular_label, $plural_label ) {
 	$pretty_singular = ucwords( $singular_label );
@@ -125,11 +127,33 @@ function strl_generate_taxonomy_labels( $singular_label, $plural_label ) {
  * @package strl
  * @since 1.0.0
  *
- * @param int $user_id The ID of the user you want to retrieve the last login for.
+ * @param int $user_id        The ID of the user you want to retrieve the last login for.
+ * @return string $login_time The last login time for a user.
  */
 function strl_get_user_last_login( $user_id ) {
 	$last_login = get_user_meta( $user_id, 'last_login', true );
 	$login_time = ( empty( $last_login ) ) ? 'Never logged in' : human_time_diff( $last_login );
 
 	return $login_time;
+}
+
+/**
+ * Get a list of all post types.
+ *
+ * @since 1.0.0
+ * @package strl
+ *
+ * @param array<string> $exclude     A list of post types you want to exclude.
+ * @return array<string> $post_types A list of all custom post types.
+ */
+function strl_get_all_cpts( $exclude = array() ) {
+	$post_types = get_post_types( array( 'public' => true ), 'names' );
+	$excluded   = array( 'post', 'page', 'attachment' );
+	$excluded   = array_merge( $excluded, $exclude );
+
+	foreach ( $excluded as $post_type ) {
+		unset( $post_types[ $post_type ] );
+	}
+
+	return $post_types;
 }
