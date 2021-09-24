@@ -158,6 +158,13 @@ add_filter( 'manage_users_sortable_columns', 'strl_make_last_login_sortable' );
  * @param WP_User_Query $user_query The WP_User_Query instance.
  */
 function strl_set_last_login_order_value( $user_query ) {
+	$current_screen = get_current_screen();
+
+	// Checks to see if we're an admin and on the users screen.
+	if ( ! is_admin() || 'users' !== $current_screen->id ) {
+		return;
+	}
+
 	if ( 'last_login' === $user_query->get( 'orderby' ) ) {
 		$user_query->set( 'orderby', 'meta_value' );
 		$user_query->set( 'meta_key', 'last_login' );
