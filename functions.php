@@ -29,7 +29,7 @@ require_once THEME_DIR . '/inc/shortcodes.php';
 require_once THEME_DIR . '/inc/admin.php';
 
 // Adds user roles.
-require_once THEME_DIR . '/inc/user-roles.php';
+require_once THEME_DIR . '/inc/users.php';
 
 // Registers the navigation menus.
 require_once THEME_DIR . '/inc/navigation.php';

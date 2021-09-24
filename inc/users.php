@@ -88,3 +88,48 @@ function strl_user_roles() {
 	);
 }
 add_action( 'init', 'strl_user_roles' );
+
+/**
+ * Adds and updates the User Meta with their last login time.
+ *
+ * @package strl
+ * @since 1.0.0
+ *
+ * @param string  $user_login The user's username.
+ * @param WP_User $user       WP_User object of the logged-in user.
+ */
+function strl_user_last_login( $user_login, $user ) {
+	update_user_meta( $user->ID, 'last_login', time() );
+}
+add_action( 'wp_login', 'strl_user_last_login', 10, 2 );
+
+/**
+ * Adds the last login column to the Users columns.
+ *
+ * @package strl
+ * @since 1.0.0
+ *
+ * @param array<string> $columns The column header labels keyed by column ID.
+ */
+function strl_user_last_login_column( $columns ) {
+	$columns['last_login'] = __( 'Last Login', 'strl' );
+	return $columns;
+}
+add_filter( 'manage_users_columns', 'strl_user_last_login_column' );
+
+/**
+ * Adds the last login value to the Last Login column.
+ *
+ * @package strl
+ * @since 1.0.0
+ *
+ * @param string $output      Custom column output. Default empty.
+ * @param string $column_name Column name.
+ * @param int    $user_id     ID of the currently-listed user.
+ */
+function strl_last_login_column_value( $output, $column_name, $user_id ) {
+	// Change the output to the last login, only if the column name is last_login.
+	$output = 'last_login' !== $column_name ? $output : strl_get_user_last_login( $user_id );
+	return $output;
+}
+add_filter( 'manage_users_custom_column', 'strl_last_login_column_value', 10, 3 );

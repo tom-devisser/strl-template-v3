@@ -118,3 +118,18 @@ function strl_generate_taxonomy_labels( $singular_label, $plural_label ) {
 		'menu_name'         => $pretty_plural,
 	);
 }
+
+/**
+ * Get a user's last login.
+ *
+ * @package strl
+ * @since 1.0.0
+ *
+ * @param int $user_id The ID of the user you want to retrieve the last login for.
+ */
+function strl_get_user_last_login( $user_id ) {
+	$last_login = get_user_meta( $user_id, 'last_login', true );
+	$login_time = ( empty( $last_login ) ) ? 'Never logged in' : human_time_diff( $last_login );
+
+	return $login_time;
+}
