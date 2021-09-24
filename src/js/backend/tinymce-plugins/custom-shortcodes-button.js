@@ -80,12 +80,40 @@
 				},
 			};
 
+			// The Accordion Object to add to the STRL Shortcodes menu.
+			const tooltipObject = {
+				text: 'Tooltip',
+				onclick() {
+					editor.windowManager.open( {
+						width: 700,
+						height: 400,
+						title: 'Trigger Text',
+						body: [ {
+							type: 'textbox',
+							id: 'tooltip-trigger-text',
+							name: 'trigger',
+							label: 'Trigger Text',
+							value: '',
+						}, {
+							type: 'textbox',
+							id: 'tooltip-tooltip-text',
+							name: 'tooltip',
+							label: 'Tooltip Text',
+							value: '',
+						} ],
+						onsubmit( window ) {
+							editor.insertContent( '[tooltip tooltip="' + window.data.tooltip + '"]' + window.data.trigger + '[/tooltip]' );
+						},
+					} );
+				},
+			};
+
 			// Creates and adds custom buttons to TinyMCE Editor
 			editor.addButton( 'strl_shortcodes', {
 				title: 'STRL',
 				image: url + '/img/icon-STRL-blauw.svg',
 				type: 'menubutton',
-				menu: [ buttonObject, accordionObject ],
+				menu: [ buttonObject, accordionObject, tooltipObject ],
 			} );
 		},
 	} );

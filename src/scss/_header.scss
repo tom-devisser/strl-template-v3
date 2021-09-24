@@ -78,8 +78,14 @@
 }
 
 .site-header {
-	.primary-navigation-menu {
-		background-color: $color-grey-light;
+	.primary-navigation-mobile {
+		background-color: $color-secondary-lighter;
+		height: calc(100vh - 57px);
+		overflow: scroll;
+
+		.is-accordion-submenu {
+			padding-left: 0.8rem;
+		}
 
 		@media (min-width: 40rem) {
 			display: none !important;

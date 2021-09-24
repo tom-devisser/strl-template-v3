@@ -79,3 +79,29 @@ function strl_accordion_shortcode( $atts, $content ) {
 	return ob_get_clean();
 }
 add_shortcode( 'accordion', 'strl_accordion_shortcode' );
+
+/**
+ * Registers the tooltip shortcode.
+ *
+ * @package strl
+ * @since 1.0.0
+ *
+ * @param array  $atts    User defined attributes in shortcode tag.
+ * @param string $content The string placed between the shortcode tags, if any.
+ */
+function strl_tooltip_shortcode( $atts, $content ) {
+	// Replace the default values with the $atts if there are any.
+	$args = shortcode_atts(
+		array(
+			'tooltip' => '',
+		),
+		$atts
+	);
+
+	$tooltip = $args['tooltip'];
+
+	ob_start();
+	echo '<span class="top" data-tooltip tabindex="1" title="' . esc_textarea( $tooltip ) . '">' . esc_textarea( $content ) . '</span>';
+	return ob_get_clean();
+}
+add_shortcode( 'tooltip', 'strl_tooltip_shortcode' );

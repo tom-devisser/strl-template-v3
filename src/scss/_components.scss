@@ -47,6 +47,20 @@
 	}
 }
 
+// Tooltip
+
+.tooltip.top {
+	background-color: $color-primary-dark;
+
+	&::before {
+		border-color: $color-primary-dark transparent transparent;
+	}
+}
+
+span.has-tip {
+	color: $color-primary-dark;
+}
+
 // Breadcrumbs
 
 .breadcrumbs {
