@@ -1,6 +1,6 @@
 <?php
 /**
- * The template for displaying all single posts
+ * The template for displaying all single posts.
  *
  * This is the template that displays all posts and custom post types,
  * unless there's a single-{post-type}.php file.

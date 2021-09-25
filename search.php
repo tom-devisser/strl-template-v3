@@ -1,6 +1,6 @@
 <?php
 /**
- * The template for displaying search results
+ * The template for displaying search results.
  *
  * This is the template that displays all search results for the default search form.
  *

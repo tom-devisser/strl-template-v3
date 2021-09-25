@@ -1,6 +1,6 @@
 <?php
 /**
- * The header for this theme
+ * The header for this theme.
  *
  * Displays the <head> section and everything up until </header>.
  *

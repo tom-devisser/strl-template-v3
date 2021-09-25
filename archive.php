@@ -1,6 +1,6 @@
 <?php
 /**
- * The main template file
+ * The archive template file. This is used as a fallback, and we don't really use this.
  *
  * Used to display a page when nothing more specific matches a query.
  *
@@ -11,6 +11,7 @@
  */
 
 get_header();
+$grid_pagination = '[facetwp facet="services_pagination"]';
 ?>
 
 <main id="primary" class="site-main">

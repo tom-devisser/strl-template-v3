@@ -1,6 +1,6 @@
 <?php
 /**
- * The 404 template file
+ * The 404 template file.
  *
  * The template for displaying 404 pages (not found).
  *

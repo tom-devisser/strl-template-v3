@@ -76,3 +76,12 @@ span.has-tip {
 		}
 	}
 }
+
+// Pagination
+
+.facetwp-facet {
+	&.facetwp-type-pager {
+		margin-top: 2rem;
+		margin-bottom: 2rem;
+	}
+}

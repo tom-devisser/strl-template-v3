@@ -1,6 +1,6 @@
 <?php
 /**
- * Registers custom post types.
+ * Registers the Services post type.
  *
  * @package strl
  * @since 1.0.0

@@ -1,8 +1,8 @@
 <?php
 /**
- * The header for this theme
+ * The footer for this theme.
  *
- * Displays the <head> section and everything up until </header>.
+ * Displays the <footer> section.
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *

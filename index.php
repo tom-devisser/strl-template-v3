@@ -1,6 +1,6 @@
 <?php
 /**
- * The main template file
+ * The main template file.
  *
  * Used to display a page when nothing more specific matches a query.
  *

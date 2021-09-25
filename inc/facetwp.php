@@ -21,10 +21,10 @@ function strl_customize_facetwp_classes( $output, $atts ) {
 		// Checks what the attribute value for template is.
 		switch ( $atts['template'] ) {
 			case 'services':
-				$output = str_replace( 'facetwp-template', 'grid-x grid-margin-x grid-margin-y medium-up-2 large-up-3', $output );
+				$output = str_replace( 'facetwp-template', 'facetwp-template grid-x grid-margin-x grid-margin-y medium-up-2 large-up-3', $output );
 				break;
 			default:
-				$output = str_replace( 'facetwp-template', 'grid-x medium-up-2 large-up-3', $output );
+				$output = str_replace( 'facetwp-template', 'facetwp-template grid-x medium-up-2 large-up-3', $output );
 				break;
 		}
 	}
