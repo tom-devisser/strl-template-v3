@@ -16,6 +16,9 @@ require_once THEME_DIR . '/inc/helpers.php';
 // Bootstraps the theme.
 require_once THEME_DIR . '/inc/bootstrap.php';
 
+// Bootstraps the theme.
+require_once THEME_DIR . '/inc/settings.php';
+
 // Registers custom post types.
 require_once THEME_DIR . '/inc/ctps/services.php';
 
