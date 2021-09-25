@@ -11,7 +11,6 @@
  */
 
 get_header();
-$grid_pagination = '[facetwp facet="services_pagination"]';
 ?>
 
 <main id="primary" class="site-main">
