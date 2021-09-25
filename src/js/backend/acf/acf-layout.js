@@ -7,11 +7,13 @@
 		$('.acf-field-strl-service-excerpt .acf-input').append( $('#postexcerpt p') ); // Excerpt instructions
 		$('.acf-field-strl-service-categories .acf-input').append( $('#tagsdiv-service_category .tagsdiv') ); // Service Category Taxonomy
 		$('.acf-field-strl-service-tags .acf-input').append( $('#tagsdiv-service_tags .tagsdiv') ); // Service Tags Taxonomy
+		$('.acf-field-strl-page-attributes .acf-input').append( $('#pageparentdiv .inside').contents() ); // Page Attributes
 
 		// Remove the leftover wrapper of the standard WP boxes.
 		$('#postimagediv').hide(); // Featured Image
 		$('#postexcerpt').hide(); // Excerpt
 		$('#tagsdiv-service_category').hide(); // Service Category Taxonomy
 		$('#tagsdiv-service_tags').hide(); // Service Tags Taxonomy
+		$('#pageparentdiv').hide(); // Page Attributes
 	});
 })(jQuery);

@@ -26,6 +26,16 @@
 				</div>
 				<div class="cell medium-6 large-3">
 					<?php dynamic_sidebar( 'footer-4' ); ?>
+					<?php
+					if ( have_rows( 'strl-footer-icons', 'option' ) ) {
+						while ( have_rows( 'strl-footer-icons', 'options' ) ) {
+							the_row();
+							if ( 'show' === get_sub_field( 'strl-footer-toggle-socials', 'option' ) ) {
+								echo do_shortcode( '[socials]' );
+							}
+						}
+					}
+					?>
 				</div>
 			</div>
 

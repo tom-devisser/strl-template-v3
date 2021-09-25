@@ -71,6 +71,7 @@ function strl_add_settings_page() {
 					'filters' => array(
 						0 => 'search',
 					),
+					'max' => 1,
 				),
 				array(
 					'key'       => 'strl-standard-search',
@@ -83,6 +84,7 @@ function strl_add_settings_page() {
 					'filters' => array(
 						0 => 'search',
 					),
+					'max' => 1,
 				)
 			)
 		),
@@ -160,18 +162,6 @@ function strl_add_settings_page() {
 						'hide' => __( 'No, don\'t show social icons in the footer.', 'strl' ),
 					)
 				),
-				array(
-					'key'          => 'strl-footer-toggle-contact-icons',
-					'label'        => __( 'Show Contact Icons', 'strl' ),
-					'name'         => 'strl-footer-toggle-contact-icons',
-					'instructions' => __( 'Decide if you want to show the contact icons (phone and email) in the footer.', 'strl' ),
-					'required'     => 1,
-					'type'         => 'radio',
-					'choices'      => array(
-						'show' => __( 'Yes, show contact icons in the footer.', 'strl' ),
-						'hide' => __( 'No, don\'t show contact icons in the footer.', 'strl' ),
-					)
-				),
 			),
 		),
 	);
@@ -195,4 +185,4 @@ function strl_add_settings_page() {
 		)
 	);
 }
-add_action( 'admin_menu', 'strl_add_settings_page', 98 );
+add_action( 'init', 'strl_add_settings_page' );

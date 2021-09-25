@@ -52,6 +52,19 @@ function strl_register_blocks() {
 			'layouts'      => $blocks,
 			'button_label' => __( 'Add new block', 'strl' ),
 		),
+		array(
+			'key'       => 'strl-page-settings-tab',
+			'label'     => __( 'Page Settings', 'strl' ),
+			'name'      => 'strl-page-settings-tab',
+			'type'      => 'tab',
+			'placement' => 'top',
+		),
+		array(
+			'key'   => 'strl-page-attributes',
+			'label' => __( 'Page Attributes', 'strl' ),
+			'name'  => 'strl-page-attributes',
+			'type'  => 'message',
+		),
 	);
 
 	// Adds ACF blocks to the Edit Page screen.

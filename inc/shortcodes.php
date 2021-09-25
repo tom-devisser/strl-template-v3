@@ -105,3 +105,39 @@ function strl_tooltip_shortcode( $atts, $content ) {
 	return ob_get_clean();
 }
 add_shortcode( 'tooltip', 'strl_tooltip_shortcode' );
+
+/**
+ * Registers the socials shortcode.
+ *
+ * @package strl
+ * @since 1.0.0
+ */
+function strl_socials_shortcode() {
+	if ( have_rows( 'strl-socials', 'option' ) ) {
+		while ( have_rows( 'strl-socials', 'options' ) ) {
+			the_row();
+			$facebook  = get_sub_field( 'strl-socials-facebook', 'option' );
+			$instagram = get_sub_field( 'strl-socials-instagram', 'option' );
+
+			ob_start();
+			?>
+			<div class="social-icons">
+			<?php
+			if ( $facebook ) {
+				?>
+				<a href="https://www.facebook.com/<?php echo esc_textarea( $facebook ); ?>" target="_blank"><i class="fab fa-facebook-f"></i><span class="screen-reader-text"><?php esc_html_e( 'Go to Facebook', 'strl' ); ?></span></a>
+				<?php
+			}
+			if ( $instagram ) {
+				?>
+				<a href="https://www.instagram.com/<?php echo esc_textarea( $instagram ); ?>" target="_blank"><i class="fab fa-instagram"></i><span class="screen-reader-text"><?php esc_html_e( 'Go to Instagram', 'strl' ); ?></span></a>
+				<?php
+			}
+			?>
+			</div>
+			<?php
+			return ob_get_clean();
+		}
+	}
+}
+add_shortcode( 'socials', 'strl_socials_shortcode' );
