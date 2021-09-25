@@ -16,7 +16,7 @@ function js() {
 }
 
 function backendjs() {
-	return src( [ 'src/js/backend/*.js', '!src/js/backend/tinymce-plugins/*' ] )
+	return src( [ 'src/js/backend/*.js', '!src/js/backend/tinymce-plugins/*', '!src/js/backend/acf/*' ] )
 		.pipe( concat( 'backend.min.js' ) )
 		.pipe( babel() )
 		.pipe( terser() )
@@ -26,6 +26,14 @@ function backendjs() {
 function tinymcejs() {
 	return src( 'src/js/backend/tinymce-plugins/*.js' )
 		.pipe( concat( 'tinymce-plugins.min.js' ) )
+		.pipe( babel() )
+		.pipe( terser() )
+		.pipe( dest( 'assets/' ) );
+}
+
+function acfjs() {
+	return src( 'src/js/backend/acf/*.js' )
+		.pipe( concat( 'acf-scripts.min.js' ) )
 		.pipe( babel() )
 		.pipe( terser() )
 		.pipe( dest( 'assets/' ) );
@@ -79,6 +87,7 @@ exports.scss = scss;
 exports.js = js;
 exports.images = images;
 exports.tinymcejs = tinymcejs;
+exports.acfjs = acfjs;
 exports.backend = parallel( backendjs, backendscss );
 exports.foundation = foundation;
 exports.vendor = vendor;
@@ -86,8 +95,9 @@ exports.watch = function() {
 	watch( [ 'src/js/**/*.js', '!src/js/backend/*.js', '!src/js/backend/tinymce-plugins/*.js' ], js );
 	watch( [ 'src/js/backend/*.js', '!src/js/backend/tinymce-plugins/*.js' ], backendjs );
 	watch( 'src/js/backend/tinymce-plugins/*.js', tinymcejs );
+	watch( 'src/js/backend/acf/*.js', acfjs );
 	watch( [ 'src/scss/**/*.scss', 'blocks/**/*.scss', '!src/scss/backend/*.scss' ], scss );
 	watch( 'src/scss/backend/*.scss', backendscss );
 	watch( 'src/img/*', images );
 };
-exports.default = parallel( images, vendor, foundation, js, scss, backendscss, backendjs, tinymcejs );
+exports.default = parallel( images, vendor, foundation, js, scss, backendscss, backendjs, tinymcejs, acfjs );

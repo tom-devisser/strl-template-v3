@@ -1,3 +1,16 @@
 .acf-flexible-content .layout {
 	margin-top: 2px !important;
 }
+
+.acf-field #wp-content-editor-tools {
+	background: transparent;
+	padding-top: 0;
+}
+
+.tagsdiv .ajaxtag {
+	display: flex;
+}
+
+.tagsdiv .ajaxtag input[type="text"] {
+	margin-right: 4px;
+}
