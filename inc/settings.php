@@ -98,7 +98,7 @@ function strl_add_settings_page() {
 			'key'        => 'strl-socials',
 			'label'      => __( 'Socials', 'strl' ),
 			'name'       => 'strl-socials',
-			'instructions' => __( 'If you enter a valid username to your social account, an icon of the corresponding social media platform will show on your website.', 'strl' ),
+			'instructions' => __( 'Enter only your username. You can toggle social icons in the Footer settings.', 'strl' ),
 			'type'       => 'group',
 			'sub_fields' => array(
 				array(
