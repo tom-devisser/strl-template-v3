@@ -85,6 +85,7 @@ add_action( 'wp_enqueue_scripts', 'strl_scripts' );
  */
 function strl_admin_scripts() {
 	// Add admin scripts and stylesheets.
+	wp_enqueue_script( 'font-awesome', 'https://kit.fontawesome.com/065b89fc32.js', array(), time(), false );
 	wp_enqueue_script( 'strl-backend-acf-scripts', get_template_directory_uri() . '/assets/acf-scripts.min.js', array(), time(), true );
 	wp_enqueue_style( 'strl-backend-styles', get_template_directory_uri() . '/assets/backend-styles.min.css', array(), time() );
 }

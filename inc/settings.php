@@ -88,9 +88,9 @@ function strl_add_settings_page() {
 		),
 		// Social Media Accounts.
 		array(
-			'key'       => 'strl-socials-tab',
-			'label'     => __( 'Social Accounts', 'strl' ),
-			'name'      => 'strl-socials-tab',
+			'key'       => 'strl-contact-tab',
+			'label'     => __( 'Contact Information', 'strl' ),
+			'name'      => 'strl-contact-tab',
 			'type'      => 'tab',
 			'placement' => 'left',
 		),
@@ -100,19 +100,38 @@ function strl_add_settings_page() {
 			'name'       => 'strl-socials',
 			'instructions' => __( 'If you enter a valid username to your social account, an icon of the corresponding social media platform will show on your website.', 'strl' ),
 			'type'       => 'group',
-			'placement'  => 'left',
 			'sub_fields' => array(
 				array(
 					'key'       => 'strl-socials-instagram',
-					'label'     => __( 'Instagram', 'strl' ),
+					'label'     => '<i class="fab fa-instagram"></i>' . ' ' . __( 'Instagram', 'strl' ),
 					'name'      => 'strl-socials-instagram',
 					'type'      => 'text',
 				),
 				array(
 					'key'       => 'strl-socials-facebook',
-					'label'     => __( 'Facebook', 'strl' ),
+					'label'     => '<i class="fab fa-facebook-f"></i>' . ' ' . __( 'Facebook', 'strl' ),
 					'name'      => 'strl-socials-facebook',
 					'type'      => 'text',
+				),
+			)
+		),
+		array(
+			'key'        => 'strl-contact-info',
+			'label'      => __( 'Contact Info', 'strl' ),
+			'name'       => 'strl-contact-info',
+			'type'       => 'group',
+			'sub_fields' => array(
+				array(
+					'key'       => 'strl-contact-phone',
+					'label'     => '<i class="fas fa-phone"></i>' . ' ' . __( 'Phone No.', 'strl' ),
+					'name'      => 'strl-contact-phone',
+					'type'      => 'text',
+				),
+				array(
+					'key'       => 'strl-contact-email',
+					'label'     => '<i class="fas fa-envelope"></i>' . ' ' . __( 'Email', 'strl' ),
+					'name'      => 'strl-contact-email',
+					'type'      => 'email',
 				),
 			)
 		),
