@@ -18,7 +18,7 @@ function strl_services_category_taxonomy() {
 	$labels         = strl_generate_taxonomy_labels( $singular_label, $plural_label );
 
 	$args = array(
-		'hierarchical'      => false,
+		'hierarchical'      => true,
 		'labels'            => $labels,
 		'show_ui'           => true,
 		'show_admin_column' => true,
