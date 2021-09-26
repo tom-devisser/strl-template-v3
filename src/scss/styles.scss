@@ -4,8 +4,14 @@
 // General Styles
 @import 'base';
 @import 'mixins';
-@import 'theme';
 @import 'typography';
+
+// Slick
+@import 'slick';
+@import 'slick-theme';
+
+// Theme
+@import 'theme';
 @import 'components';
 @import 'header';
 @import 'footer';
@@ -14,6 +20,7 @@
 @import '../../blocks/header/header';
 @import '../../blocks/columns/columns';
 @import '../../blocks/grid/grid';
+@import '../../blocks/slider/slider';
 
 // Partial Styles
 @import '../../blocks/partials/grid-service';

@@ -29,4 +29,5 @@ $blocks[ $block_name ] = array(
 			'required' => 0,
 		),
 	),
+	'max'        => 1,
 );

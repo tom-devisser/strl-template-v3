@@ -8,7 +8,7 @@ const sass = require( 'gulp-sass' )( require( 'sass' ) );
 const rename = require( 'gulp-rename' );
 
 function js() {
-	return src( [ 'src/js/*.js', '!src/js/backend/*.js' ] )
+	return src( [ 'src/js/slick.js', 'src/js/*.js', '!src/js/backend/*.js' ] )
 		.pipe( concat( 'scripts.min.js' ) )
 		.pipe( babel() )
 		.pipe( terser() )
@@ -77,9 +77,9 @@ function foundation() {
 
 function vendor() {
 	return src( 'src/js/vendor/*.js' )
+		.pipe( concat( 'vendor.min.js' ) )
 		.pipe( babel() )
 		.pipe( terser() )
-		.pipe( rename( 'vendor.min.js' ) )
 		.pipe( dest( 'assets/' ) );
 }
 

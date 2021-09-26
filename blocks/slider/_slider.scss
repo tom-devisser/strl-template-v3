@@ -1,0 +1,16 @@
+.slider-section {
+	.slider-wrapper {
+		padding: 3rem;
+		min-height: 16rem;
+		display: flex !important;
+		align-items: center;
+
+		&.light-text {
+			color: $color-white;
+		}
+
+		&.dark-text {
+			color: $color-black;
+		}
+	}
+}
