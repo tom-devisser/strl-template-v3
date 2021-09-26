@@ -11,7 +11,6 @@
  */
 
 ?>
-
 	<footer class="site-footer">
 		<div class="grid-container">
 			<div class="grid-x grid-padding-x grid-padding-y">
