@@ -13,13 +13,14 @@ $prefix    = $blockname . '-';
 $slider_title = get_sub_field( $prefix . 'title' );
 $text_color   = get_sub_field( $prefix . 'text-color' );
 $slides       = 'slider-slides';
+$full_width   = get_sub_field( $prefix . 'full-width' );
 ?>
 <!-- <?php echo esc_textarea( $blockname ); ?> -->
-<div class="grid-container <?php echo esc_textarea( $blockname ); ?>-section">
+<div class="grid-container <?php echo esc_textarea( $blockname ); ?>-section<?php echo ( 'yes' === $full_width ? ' full' : '' ); ?>">
 	<?php
 	if ( $slider_title > 0 ) {
 		?>
-		<div class="grid-x grid-padding-y">
+		<div class="grid-x grid-padding-y<?php echo ( 'yes' === $full_width ? '' : 'grid-padding-x' ); ?>">
 			<div class="cell">
 				<h2 class="slider-title"><?php echo esc_textarea( $slider_title ); ?></h2>
 			</div>

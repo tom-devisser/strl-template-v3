@@ -60,6 +60,18 @@ $blocks[ $block_name ] = array(
 			'type'  => 'tab',
 		),
 		array(
+			'key'           => $block_name . '-full-width',
+			'label'         => __( 'Full Width', 'strl' ),
+			'name'          => $block_name . '-full-width',
+			'type'          => 'radio',
+			'choices'       => array(
+				'yes' => __( 'Yes, I want this row full width', 'strl' ),
+				'no'  => __( 'No, I want this row within the container', 'strl' ),
+			),
+			'required'      => 1,
+			'default_value' => 'no',
+		),
+		array(
 			'key'      => $block_name . '-text-color',
 			'label'    => __( 'Text Color', 'strl' ),
 			'name'     => $block_name . '-text-color',

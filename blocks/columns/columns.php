@@ -10,11 +10,12 @@ $blockname = basename( __FILE__, '.php' );
 $prefix    = $blockname . '-';
 
 // Block Field Values.
-$columns = get_sub_field( $prefix . 'repeater' );
+$columns    = get_sub_field( $prefix . 'repeater' );
+$full_width = get_sub_field( $prefix . 'full-width' );
 
 ?>
 <!-- <?php echo esc_textarea( $blockname ); ?> -->
-<div class="grid-container <?php echo esc_textarea( $blockname ); ?>-section">
+<div class="grid-container <?php echo esc_textarea( $blockname ); ?>-section<?php echo ( 'yes' === $full_width ? ' full' : '' ); ?>">
 	<div class="grid-x grid-padding-y grid-padding-x large-up-<?php echo count( $columns ); ?>">
 		<?php
 		if ( have_rows( $prefix . 'repeater' ) ) {
