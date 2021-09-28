@@ -1,5 +1,10 @@
 .slider-section {
+	.slick-slider {
+		margin-top: 30px;
+	}
+
 	.slider-wrapper {
+		background-size: cover;
 		padding: 4rem;
 		min-height: 16rem;
 		display: flex !important;
