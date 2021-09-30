@@ -14,7 +14,6 @@ $text          = get_sub_field( $prefix . 'text' );
 $text_position = get_sub_field( $prefix . 'text-position' );
 $image         = get_sub_field( $prefix . 'image' );
 $full_width    = get_sub_field( $prefix . 'full-width' );
-
 ?>
 <!-- <?php echo esc_textarea( $blockname ); ?> -->
 <div class="grid-container <?php echo esc_textarea( $blockname ); ?>-section<?php echo ( 'yes' === $full_width ? ' full' : '' ); ?>">
@@ -26,8 +25,7 @@ $full_width    = get_sub_field( $prefix . 'full-width' );
 		</div>
 		<div class="cell small-12 medium-6">
 			<div class="media-column">
-				<div class="image" style="background-image: url('<?php echo esc_url( $image['url'] ); ?>')">
-				</div>
+				<div class="image" style="background-image: url('<?php echo esc_url( $image['url'] ); ?>')"></div>
 			</div>
 		</div>
 	</div>

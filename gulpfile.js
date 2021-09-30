@@ -83,14 +83,6 @@ function vendor() {
 		.pipe( dest( 'assets/' ) );
 }
 
-exports.scss = scss;
-exports.js = js;
-exports.images = images;
-exports.tinymcejs = tinymcejs;
-exports.acfjs = acfjs;
-exports.backend = parallel( backendjs, backendscss );
-exports.foundation = foundation;
-exports.vendor = vendor;
 exports.watch = function() {
 	watch( [ 'src/js/**/*.js', '!src/js/backend/*.js', '!src/js/backend/tinymce-plugins/*.js' ], js );
 	watch( [ 'src/js/backend/*.js', '!src/js/backend/tinymce-plugins/*.js' ], backendjs );
